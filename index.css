@@ -1,0 +1,146 @@
+.page {
+    background: linear-gradient(90deg, rgba(148, 2, 2, 0.50) 0%, rgba(2, 36, 158, 0.50) 100%);
+}
+
+.timer {
+    margin-top: 100px;
+    margin-left: 95px;
+    margin-bottom: 20px;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.focus-time {
+    width: 360px;
+    height: 800px;
+    background-color: #BA4949;
+    border-radius: 32px;
+}
+
+.short-break {
+    width: 360px;
+    height: 800px;  
+    background-color: #38858A;
+    border-radius: 32px;  
+}
+
+.long-break {
+    width: 360px;
+    height: 800px;   
+    background-color: #397097;
+    border-radius: 32px; 
+}
+
+.minutes {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.separator {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.seconds {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+/* .start-button {
+    cursor: pointer;
+    background: url(./images/play-icon.svg);
+    width: 64px;
+    height: 67px;
+    border: none;
+} */
+
+.buttons {
+    margin-left: 66px;
+}
+
+.start-button {
+    cursor: pointer;
+    border-radius: 12px;
+    border: 1px solid #FFF;
+    width: 73px;
+    height: 32px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    background: transparent;
+}
+
+.stop-button {
+    cursor: pointer;
+    border-radius: 12px;
+    border: 1px solid #FFF;
+    width: 73px;
+    height: 32px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    background: transparent;
+}
+
+.reset-button {
+    cursor: pointer;
+    border-radius: 12px;
+    border: 1px solid #FFF;
+    width: 73px;
+    height: 32px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    background: transparent;
+}
+
+.title {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.settings-button {
+    cursor: pointer;
+    border-radius: 12px;
+    border: 1px solid #FFF;
+    width: 73px;
+    height: 32px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    background: transparent;
+    margin-left: 144px;
+}
