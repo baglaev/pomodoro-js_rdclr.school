@@ -4,6 +4,9 @@ const longBreakButton = document.querySelector('.lb-button');
 const focusTime = document.querySelector('.focus-time');
 const minutes = document.querySelector('.minutes');
 const seconds = document.querySelector('.seconds');
+const startButton = document.querySelector('.start-button');
+const stopButton = document.querySelector('.stop-button');
+const resetButton = document.querySelector('.reset-button');
 
 shortBreakButton.addEventListener('click', () => {
     focusTime.classList.add('short-break');
