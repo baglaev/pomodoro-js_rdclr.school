@@ -3,9 +3,9 @@
 }
 
 .timer {
-    margin-top: 100px;
-    margin-left: 95px;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
 }
 
 .section {
@@ -22,6 +22,15 @@
 }
 
 .short-break {
+    background-color: #38858A;  
+}
+
+.long-break {
+    background-color: #397097;
+}
+
+
+/* .short-break {
     width: 360px;
     height: 800px;  
     background-color: #38858A;
@@ -33,7 +42,7 @@
     height: 800px;   
     background-color: #397097;
     border-radius: 32px; 
-}
+} */
 
 .minutes {
     color: #FFF;
@@ -71,10 +80,39 @@
 } */
 
 .buttons {
-    margin-left: 66px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-.start-button {
+.button {
+    cursor: pointer;
+    border-radius: 12px;
+    border: 1px solid #FFF;
+    width: 73px;
+    height: 32px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    background: transparent;
+}
+
+.button-low {
+    font-size: 10px;
+}
+
+.button-m {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* .start-button {
     cursor: pointer;
     border-radius: 12px;
     border: 1px solid #FFF;
@@ -117,7 +155,7 @@
     font-weight: 300;
     line-height: normal;
     background: transparent;
-}
+} */
 
 .title {
     color: #FFF;
@@ -129,11 +167,11 @@
     text-align: center;
 }
 
-.settings-button {
+/* .settings-button {
     cursor: pointer;
     border-radius: 12px;
     border: 1px solid #FFF;
-    width: 73px;
+    width: 100px;
     height: 32px;
     color: #FFF;
     font-family: Inter;
@@ -142,5 +180,7 @@
     font-weight: 300;
     line-height: normal;
     background: transparent;
-    margin-left: 144px;
-}
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+} */
