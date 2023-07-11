@@ -29,21 +29,6 @@
     background-color: #397097;
 }
 
-
-/* .short-break {
-    width: 360px;
-    height: 800px;  
-    background-color: #38858A;
-    border-radius: 32px;  
-}
-
-.long-break {
-    width: 360px;
-    height: 800px;   
-    background-color: #397097;
-    border-radius: 32px; 
-} */
-
 .minutes {
     color: #FFF;
     font-family: Inter;
@@ -70,14 +55,6 @@
     font-weight: 300;
     line-height: normal;
 }
-
-/* .start-button {
-    cursor: pointer;
-    background: url(./images/play-icon.svg);
-    width: 64px;
-    height: 67px;
-    border: none;
-} */
 
 .buttons {
     display: flex;
@@ -112,51 +89,6 @@
     display: block;
 }
 
-/* .start-button {
-    cursor: pointer;
-    border-radius: 12px;
-    border: 1px solid #FFF;
-    width: 73px;
-    height: 32px;
-    color: #FFF;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    background: transparent;
-}
-
-.stop-button {
-    cursor: pointer;
-    border-radius: 12px;
-    border: 1px solid #FFF;
-    width: 73px;
-    height: 32px;
-    color: #FFF;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    background: transparent;
-}
-
-.reset-button {
-    cursor: pointer;
-    border-radius: 12px;
-    border: 1px solid #FFF;
-    width: 73px;
-    height: 32px;
-    color: #FFF;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    background: transparent;
-} */
-
 .title {
     color: #FFF;
     font-family: Inter;
@@ -167,20 +99,12 @@
     text-align: center;
 }
 
-/* .settings-button {
-    cursor: pointer;
-    border-radius: 12px;
-    border: 1px solid #FFF;
-    width: 100px;
-    height: 32px;
-    color: #FFF;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    background: transparent;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-} */
+.popup-settings {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup_opened {
+    opacity: 1;
+    visibility: visible;
+}

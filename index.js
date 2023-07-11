@@ -25,3 +25,13 @@ pomodoroButton.addEventListener('click', () => {
     focusTime.classList.remove('short-break');
     minutes.textContent = 25;
 })
+
+startButton.addEventListener('click', () => {
+    setInterval(subtractTime, 1000)
+})
+
+function subtractTime() {
+    if (minutes > 0) {
+        minutes.value--;
+    }
+}
