@@ -10,6 +10,9 @@ const resetButton = document.querySelector('.reset-button');
 const setButton = document.querySelector('.set-button')
 const minutesInput = document.querySelector('.input-minutes');
 const title = document.querySelector('.title');
+const taskInput = document.querySelector('.task-input');
+const addButton = document.querySelector('.add-button');
+const todoList = document.querySelector('.todo-list');
 
 let timer;
 let totalSeconds = 1500;
@@ -81,3 +84,42 @@ longBreakButton.addEventListener('click', () => {
 });
 
 setButton.addEventListener('click', setUserTimer);
+
+addButton.addEventListener('click', () => {
+    let task = taskInput.value.trim();
+
+    if (task !== '') {
+        const taskLiElement = document.createElement('li');
+        const taskSpanElement = document.createElement('span');
+        const deleteButton = document.createElement('button');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+
+        taskLiElement.classList.add('li-element');
+        taskSpanElement.classList.add('span-element');
+        deleteButton.classList.add('delete-button');
+        checkbox.classList.add('checkbox-element');
+
+        taskSpanElement.textContent = task;
+        deleteButton.textContent = 'Удалить';
+
+        deleteButton.addEventListener('click', function() {
+            taskLiElement.remove();
+        });
+
+        checkbox.addEventListener('change', function(e) {
+            if (e.target.checked) {
+                taskSpanElement.classList.add('completed');
+            } else {
+                taskSpanElement.classList.remove('completed');
+            }
+        });
+
+        taskLiElement.append(checkbox);
+        taskLiElement.append(taskSpanElement);
+        taskLiElement.append(deleteButton);
+        todoList.append(taskLiElement);
+
+        taskInput.value = '';
+    }
+})
