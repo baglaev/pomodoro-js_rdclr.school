@@ -15,9 +15,9 @@
         <section class="section">
             <div class="focus-time">
                 <div class="buttons">
-                    <button type="button" class="button button-low pomodoro-button">Pomodoro</button>
-                    <button type="button" class="button button-low sb-button">Short-break</button>
-                    <button type="button" class="button button-low lb-button">Long-break</button>
+                    <button type="button" class="button button-low pomodoro-button">Помодоро</button>
+                    <button type="button" class="button button-low sb-button">Короткий перерыв</button>
+                    <button type="button" class="button button-low lb-button">Долгий перерыв</button>
                 </div>
                 <div class="timer">
                     <span class="minutes">25</span>
@@ -25,26 +25,25 @@
                     <span class="seconds">00</span>
                 </div>
 
-                <input class="input-minutes" type="number" placeholder="Минуты">
-                <input class="input-seconds" type="number" placeholder="Секунды">
+                <input class="input-minutes" type="number" min="1" max="60" step="1" placeholder="Минуты">
+                <button class="button button-low set-button" type="button">Установить</button>
 
                 <div class="buttons">
-                    <button type="button" class="button start-button">Start</button>
-                    <button type="button" class="button stop-button">Stop</button>
-                    <button type="button" class="button reset-button">Reset</button>
+                    <button type="button" class="button start-button">Старт</button>
+                    <button type="button" class="button stop-button">Стоп</button>
+                    <button type="button" class="button reset-button">Сброс</button>
                 </div>
-                <p class="title">Focus time</p>
-                <button type="button" class="button button-m settings-button">Settings</button>
+                <!-- <button type="button" class="button button-m settings-button">Settings</button> -->
             </div>
         </section>
    </main>
-   <div class="popup-settings">
+   <!-- <div class="popup-settings">
         <p class="subtitle">Focus timer</p>
         <input type="text" class="input-focus">
         <p class="subtitle">Short break timer</p>
         <input type="text" class="input-short">
         <p class="subtitle">Long break timer</p>
         <input type="text" class="input-long">
-   </div>
+   </div> -->
 </body>
 </html>
