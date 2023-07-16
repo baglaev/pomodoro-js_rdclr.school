@@ -15,7 +15,10 @@ const addButton = document.querySelector('.add-button');
 const todoList = document.querySelector('.todo-list');
 
 let timer;
-let totalSeconds = 1500;
+let initialSeconds = 1500;
+let totalSeconds = initialSeconds;
+let cycleCount = 0;
+let isBreak = false;
 
 function startTimer() {
     timer = setInterval(() => {
@@ -29,6 +32,25 @@ function startTimer() {
       if (totalSeconds === 0) {
         clearInterval(timer);
         alert('Время вышло!');
+
+        if (isBreak) {
+            setTimer(25);
+            focusTime.style.backgroundColor = '#BA4949';
+            title.textContent = 'Время поработать!';
+        } else {
+            cycleCount++;
+            if (cycleCount % 4 === 0) {
+                setTimer(15);
+                focusTime.style.backgroundColor = '#397097';
+                title.textContent = 'Длинный перерыв';
+            } else {
+                setTimer(5);
+                focusTime.style.backgroundColor = '#38858A';
+                title.textContent = 'Короткий перерыв';
+            }
+        }
+        startTimer();
+
       }
     }, 1000);
 }
@@ -40,26 +62,30 @@ function stopTimer() {
 function resetTimer() {
     stopTimer();
     focusTime.style.backgroundColor = '#BA4949';
-    title.textContent = 'Время поработать!'
+    title.textContent = 'Время поработать!';
+    cycleCount = 0;
     setTimer(25);
 }
 
 function setTimer(time) {
     clearInterval(timer);
-    totalSeconds = time * 60;
+    initialSeconds = time * 60;
+    totalSeconds = initialSeconds;
     minutesOnDisplay.textContent = time < 10 ? '0' + time : time;
     secondsOnDisplay.textContent = '00';
+    isBreak = time === 5;
 }
 
-function setUserTimer() {
-    let minutes = parseInt(minutesInput.value, 10);
-    if (isNaN(minutes) || minutes < 1 || minutes > 60) {
-        alert('Введите секунды от 1 до 60');
-    } else {
-        setTimer(minutes);
-        minutesInput.value = '';
-    }
-}
+// function setUserTimer() {
+//     let minutes = parseInt(minutesInput.value, 10);
+//     if (isNaN(minutes) || minutes < 1 || minutes > 60) {
+//         alert('Введите секунды от 1 до 60');
+//     } else {
+//         setTimer(minutes);
+//         minutesInput.value = '';
+//     }
+// }
+
 
 startButton.addEventListener('click', startTimer);
 stopButton.addEventListener('click', stopTimer);
@@ -83,7 +109,9 @@ longBreakButton.addEventListener('click', () => {
     title.textContent = 'Длинный перерыв';
 });
 
-setButton.addEventListener('click', setUserTimer);
+// setButton.addEventListener('click', setUserTimer);
+
+initialSeconds = parseInt(minutesOnDisplay.textContent, 10) * 60;
 
 addButton.addEventListener('click', () => {
     let task = taskInput.value.trim();
